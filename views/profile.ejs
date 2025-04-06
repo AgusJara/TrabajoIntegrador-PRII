@@ -48,28 +48,31 @@
 			<nav class="main-navbar">
 				<ul class="left-navbar">
 					<li><a href="/">Todos los productos</a></li>
-					<li><a href="product-add.html">Cargar productos</a></li> <!-- CONSULTAR !!!!!! -->
+					<li><a href="/product/agregar">Cargar productos</a></li> <!-- CONSULTAR !!!!!! -->
 				</ul>
 	
 				<ul class="right-navbar">
+				<% if(profile){ %>
 					<li><a href="/profile">
-							Nombre del usuario <i class="fas fa-user"></i>
+							<p><% profile.usuario %></p> <i class="fas fa-user"></i>
 						</a>
 					</li>
 					<li>
-						<form action="" method="post">
+						<form action="" method="post"> <!--No se que poner en el action-->
 							<button class="logout" type="submit">
 								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 							</button>
 						</form>
 					</li>
-					<!-- Solo deslogueado <li>
-							<a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
+				<% }else{ %>
+					<li>
+							<a href="/resgistracion">Creá tu cuenta <i class="far fa-address-card"></i>
 							</a>
 						</li>
 						<li>
-							<a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-						</li> -->
+							<a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+						</li>
+				<% } %>
 				</ul>
 			</nav>
 		</div>
@@ -80,11 +83,11 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="https://via.placeholder.com/150" alt="foto de perfil" class="foto-perfil">
+				<img src="<%= profile.fotoDePerfil %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title">Nombre del usuario 
+					<h1 class="main-title"><%=profile.usuario  %> 
 						<a href="profile-edit.html"> <!-- CONSULTAR !!!!!! -->
 							<i class="fas fa-cog"></i>
 						</a>
@@ -102,15 +105,7 @@
 		</div>
 	</section>
 	<!-- /Datos del usuario -->
-	<div>
-		<h1>Mi perfil</h1>
-		<img src="<%= profile.fotoDePerfil %>" alt="foto-de-perfil">
-		<h4>Usuario: <%= profile.usuario %></h4>
-		<h4>Email: <%= profile.email %></h4>
-		<h4>Fecha de nacimiento: <%= profile.fechaDeNacimiento %></h4>
-		<h4>Nro de documento: <%= profile.nroDeDocumento %></h4>
-	</div>
-
+	
 	<!-- Mis productos -->
 	<div class="container products-wrapper">
 		<div class="row">
@@ -120,7 +115,7 @@
 			<!-- Show mis productos -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/producto">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -134,7 +129,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/producto">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -149,7 +144,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/producto">
+					<a href="/product>
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -164,7 +159,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/producto">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -179,7 +174,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/producto">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -194,7 +189,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/producto">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -209,7 +204,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/productol">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -224,7 +219,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/producto">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>

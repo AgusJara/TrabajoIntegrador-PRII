@@ -50,21 +50,25 @@
 			<nav class="main-navbar">
 				<ul class="left-navbar">
 					<li><a href="/">Todos los productos</a></li>
-					<!-- solo logueado <li><a href="">Cargar productos</a></li> -->
+				<% if(profile){ %>
+					<li><a href="">Cargar productos</a></li>
+				<% } %>
 				</ul>
 	
 				<ul class="right-navbar">
-					<!-- Solo logueado <li><a href="profile.html">
-								Nombre del usuario <i class="fas fa-user"></i>
+				<% if(profile){ %>
+					<li><a href="/profile">
+								<p><% profile.usuario %></p> <i class="fas fa-user"></i>
 							</a>
 						</li>
 						<li>
-							<form action="" method="post">
+							<form action="" method="post"> <!--No se que poner en el action-->
 								<button class="logout" type="submit">
 									Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 								</button>
 							</form>
-						</li> -->
+						</li>
+				<% }else{ %>
 					<li>
 						<a href="/registracion">Creá tu cuenta <i class="far fa-address-card"></i>
 						</a>
@@ -72,6 +76,7 @@
 					<li>
 						<a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
 					</li>
+				<% } %>
 				</ul>
 			</nav>
 		</div>
@@ -81,7 +86,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">Nombre del producto</h2> 
 			<p class="product-detail-description">
-				<a href="product-add.html">Editar</a> <!-- CONSULTAR COMO SERIA!!!! -->
+				<a href="/product/agregar">Editar</a> <!-- CONSULTAR COMO SERIA!!!! -->
 			</p>
 		</div>
 		<div class="product-detail">

@@ -4,4 +4,6 @@ const profileController = {
         res.render('profile',{profile:profile.lista})
     }
 };
+
+module.exports = profileController;
     

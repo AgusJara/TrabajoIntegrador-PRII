@@ -50,12 +50,15 @@
 			<nav class="main-navbar">
 				<ul class="left-navbar">
 					<li><a href="/">Todos los productos</a></li>
-					<!-- solo logueado <li><a href="">Cargar productos</a></li> -->
+				<% if(profile){ %>
+					<li><a href="/product/agregar">Cargar productos</a></li>
+				<% } %>
 				</ul>
 	
 				<ul class="right-navbar">
-					<!-- Solo logueado <li><a href="profile.html">
-								Nombre del usuario <i class="fas fa-user"></i>
+				<% if(profile){ %>
+					<li><a href="/profile">
+								<p><%= profile.usuario %></p> <i class="fas fa-user"></i>
 							</a>
 						</li>
 						<li>
@@ -64,7 +67,8 @@
 									Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 								</button>
 							</form>
-						</li> -->
+						</li>
+				<% }else{ %>
 					<li>
 						<a href="/registracion">Creá tu cuenta <i class="far fa-address-card"></i>
 						</a>
@@ -72,6 +76,7 @@
 					<li>
 						<a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
 					</li>
+				<% } %>
 				</ul>
 			</nav>
 		</div>

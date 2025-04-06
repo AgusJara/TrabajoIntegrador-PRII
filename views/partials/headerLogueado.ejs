@@ -47,12 +47,12 @@
 			<nav class="main-navbar">
 				<ul class="left-navbar">
 					<li><a href="/">Todos los productos</a></li>  <!-- RE-CHEQUEAR RUTA HREF (esta en base a como lo tenemos en app) -->
-					<li><a href="/producto">Cargar productos</a></li>  <!-- RE-CHEQUEAR RUTA HREF (esta en base a como lo tenemos en app) -->
+					<li><a href="/product">Cargar productos</a></li>  <!-- RE-CHEQUEAR RUTA HREF (esta en base a como lo tenemos en app) -->
 				</ul>
 	
 				<ul class="right-navbar">
 					<li><a href="/profile"> <!-- RE-CHEQUEAR RUTA HREF (esta en base a como lo tenemos en app) -->
-							<%= profile.usuario %> <i class="fas fa-user"></i> <!-- Nombre del usuario no se si va esto? -->
+						Nombre del usuario <i class="fas fa-user"></i> <!--  no se si va esto? -->
 						</a>
 					</li>
 					<li>
@@ -62,13 +62,15 @@
 							</button>
 						</form>
 					</li>
-					<!-- Solo deslogueado <li>
-						<a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
+					<% if(!profile){ %>
+					<li>
+						<a href="/registracion">Creá tu cuenta <i class="far fa-address-card"></i>
 						</a>
 					</li>
 					<li>
-						<a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-					</li> -->
+						<a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+					</li>
+					<% } %>
 				</ul>
 			</nav>
 		</div>
