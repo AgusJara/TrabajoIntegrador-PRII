@@ -1,9 +1,9 @@
-const profile = require('../db/usuario');
+const profile = require('../db/datos');
 const profileController = {
     info: function (req,res) {
-        res.render('profile',{profile:profile.lista})
+        res.render('profile',{ profile: datos.usuario})
     }
 };
 
 module.exports = profileController;
-    
+
