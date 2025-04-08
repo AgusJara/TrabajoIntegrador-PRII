@@ -6,4 +6,6 @@ router.get('/', productoController.index)
 
 router.get('/agregar', productoController.agregar)
 
+router.get('/detalle', productoController.detalle)
+
 module.exports = router;
