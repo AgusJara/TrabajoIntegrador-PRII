@@ -1,4 +1,4 @@
-//Agregar db info. 
+let info = require('../db/datos')
 
 const productoController= {
     index: function(req,res) {
