@@ -60,6 +60,34 @@ const datos ={
             imagen: "/images/products/plancha.webp"
           }
     ],
+    comentarios : [
+      {
+        usuario: "jbernstein@udesa.edu.ar" ,
+        texto: 'Me encanto la plancha!', 
+        foto: 'pendiente', // agregar fotos y linkearlas  
+      } , 
+      {
+        usuario: 'martingomez@gmail.com' ,
+        texto: 'Muy buenos precios', 
+        foto: 'pendiente', // agregar fotos y linkearlas  
+      } ,
+      {
+        usuario: 'dcamuglai@udesa.edu.ar',
+        texto: 'Tremendos productos! ', 
+        foto: 'pendiente', // agregar fotos y linkearlas   
+      } ,
+      {
+        usuario: 'ajaralmbides@udesa.edu.ar',
+        texto: 'Fascinada con todo!!!!!!', 
+        foto: 'pendiente', // agregar fotos y linkearlas   
+      } ,
+      {
+        usuario: 'mia@yahoo.com',
+        texto: 'Lo super recomiendo, me copo todo!!!' , 
+        foto: 'pendiente', // agregar fotos y linkearlas  
+      } ,
+
+    ]
 };
 
 module.exports = datos;
