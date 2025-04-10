@@ -1,5 +1,4 @@
-
-// let info = require(..////)
+const datos= require('../db/datos');
 
 const productos = {
     login : function(req, res, next) {
