@@ -24,9 +24,9 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title"> <%= producto.nombre %> </h2> 
+			<h2 class="products-title"> <%= producto.nombre%> </h2> 
 			<p class="product-detail-description">
-				<a href="/product/agregar"> Editar </a> <!-- CONSULTAR COMO SERIA!!!! -->
+				<a href="/products/product-add"> Editar </a> <!-- CONSULTAR COMO SERIA!!!! -->
 			</p>
 		</div>
 		<div class="product-detail">
@@ -39,52 +39,16 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
+						<%for (let i=0; i< comentarios.length; i++) { %>
 						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="/profile">Nombre usuario: <%= producto.comentarios[0].usuario %> </a> </strong>
-								<%= producto.comentarios[0].texto %> //El texto del usuario. 
-								</p>
+							<img src="/images/users<%= comentarios[i].foto%>" alt="">
+							<div class="data"> 
+								<p class="user"> 
+									<strong> <a href="/users/profile"> <%= comentarios[i].usuario%> </a></strong>
+								    <%= comentarios[i].texto %> </p>
 							</div>
 						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur.</p>
-							</div>
-						</article>
-
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile">Nombre usuario: <%= producto.comentarios[1].usuario %> </a> </strong>
-									<%= producto.comentarios[1].texto %> 
-									</p>
-							</div>
-						</article>
-
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile">Nombre usuario: <%= producto.comentarios[2].usuario %> </a> </strong>
-									<%= producto.comentarios[2].texto %> 
-								</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile">Nombre usuario: <%= producto.comentarios[3].usuario %></a> </strong>
-									<%= producto.comentarios[3].texto %> 
-								</p>
-							</div>
-						</article>
+						<% } %>
 
 					</section>
 					<form class="form" action="" method="POST">

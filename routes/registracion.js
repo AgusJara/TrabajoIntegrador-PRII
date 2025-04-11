@@ -1,7 +1,7 @@
-const express = require('express');
-let router = express.Router();
-const registracionController = require ('../controllers/registracionController')
+//const express = require('express');
+//let router = express.Router();
+//const registracionController = require ('../controllers/registracionController')
 
-router.get('/', registracionController)
+//router.get('/', registracionController)
 
-module.exports = router;
+//module.exports = router;

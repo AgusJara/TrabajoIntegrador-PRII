@@ -1,5 +1,5 @@
 
-let info = require('../db/datos')
+let datos = require('../db/datos')
 
 
 const productos = {
