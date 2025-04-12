@@ -5,3 +5,4 @@
 //router.get('/', registracionController)
 
 //module.exports = router;
+// borrar
