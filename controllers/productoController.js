@@ -2,10 +2,10 @@ let datos = require('../db/datos')
 
 const productoController= {
   index: function(req,res) {
-    res.render('product', {producto: datos, comentarios: datos.comentarios})
+    res.render('product', {producto: datos.productos, comentarios: datos.comentarios})
 },
     agregar: function(req,res){
-        res.render('product-add')
+        res.render('product-add',{producto: datos.productos})
     }, 
     detalle: function(req,res){
       let resultado = {};
