@@ -2,7 +2,7 @@
 const datos = require('../db/datos');
 const profileController = {
     info: function (req,res) {
-        res.render('profile',{ profile: datos.usuario})
+        res.render('profile',{ profile: datos.usuario[0]})
     }
 };
 
