@@ -2,7 +2,7 @@ let datos = require('../db/datos')
 
 let productoController= {
     agregar: function(req,res){
-        res.render('product-add',{producto: datos.productos}) //
+        res.render('product-add', {usuario: datos.usuario[0]}) //
     }, 
     
     detalle: function(req,res){
