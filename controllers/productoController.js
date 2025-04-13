@@ -1,12 +1,10 @@
 let datos = require('../db/datos')
 
 let productoController= {
-  index: function(req,res) {
-    res.render('product', {producto: datos.productos, comentarios: datos.comentarios})
-},
     agregar: function(req,res){
         res.render('product-add',{producto: datos.productos}) //
     }, 
+    
     detalle: function(req,res){
       let resultado = {};
     
@@ -17,12 +15,7 @@ let productoController= {
           resultado = prod;
         }
       }
-    
-      if (resultado) {
-        res.render('product', {producto: resultado, comentarios: datos.comentarios });
-      } else {
-        res.send('Producto no encontrado');
-      }
+      res.render('product', {producto: resultado});
   },
    
 }

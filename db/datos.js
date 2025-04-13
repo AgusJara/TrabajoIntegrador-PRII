@@ -21,7 +21,7 @@ const datos ={
             nombre: "Macbook",
             descripcion: "Macbook para que disfrutes programar.",
             imagen: "img-macbook-pro-2019.jpg",
-            id: 2,
+            id: 2, 
           },
           {
             nombre: "Samsung",
@@ -32,8 +32,8 @@ const datos ={
           {
             nombre: "Television samsung",
             descripcion: "Television grande de samsung buenisimo para ver peliculas.",
-            imagen: "img-tc-samsung-smart.jpg",
-            id: 4,
+            imagen: "img-tv-samsung-smart.jpg",
+            id: 4, 
           },
           {
             nombre: "Apple pencil",
@@ -72,7 +72,7 @@ const datos ={
             id: 10,
           }
     ],
-    comentarios : [
+    comentarios : [ //corregir esto
       {
         usuario: "jbernstein@udesa.edu.ar" ,
         texto: 'Me encanto la plancha!', 
