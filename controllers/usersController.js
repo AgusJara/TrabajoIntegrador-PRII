@@ -4,10 +4,6 @@ let usersController = {
         res.render('profile',{profile: datos.usuario[0],
                               producto: datos.productos});
     },
-    //login: function (req,res) {
-       // res.render('login',{profile: datos.usuario[0],
-                          //  productos: datos.productos});
-    //},
    login: function (req,res,) {
     res.render ('login')
 
