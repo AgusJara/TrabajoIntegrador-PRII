@@ -32,31 +32,18 @@
 					<li><a href="/">Todos los productos</a></li>
 					<!-- < if(profile){ %>
 						<li><a href="/product/agregar">Cargar productos</a></li>
-					< } %>
+					< } %> --> 
 				</ul>
 	
 				<ul class="right-navbar">
-				< if(profile){ %>
-					<li><a href="/profile">
-								<= profile.usuario %><i class="fas fa-user"></i>
-							</a>
-						</li>
-						<li>
-							<form action="" method="post">
-								<button class="logout" type="submit">
-									Cerrar sesión <i class="fas fa-sign-in-alt"></i>
-								</button>
-							</form>
-						</li>
-				< }else{ >
-					<li>
-						<a href="/registracion">Creá tu cuenta <i class="far fa-address-card"></i>
+                    <li>
+						<a href="/users/register">Creá tu cuenta <i class="far fa-address-card"></i>
 						</a>
 					</li>
 					<li>
-						<a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+						<a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
 					</li>
-				< } > --> <!-- agus !!!!1-->
+				 
 				</ul>
 			</nav>
 		</div>
