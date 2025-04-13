@@ -5,6 +5,10 @@ let homeController = {
         res.render('index', { profile: datos.usuario[0],
                               productos: datos.productos
          });
+      }, 
+
+      resultadosBusqueda: function (req,res){
+        res.render('search-results', {productos: datos.productos, })
       }
 
 }

@@ -13,7 +13,7 @@ let usersController = {
 
    },
     register: function (req,res) {
-        res.render('register',{profile: datos.usuario[0]})
+        res.render('register',{profile: datos.usuario[0], productos: datos.usuario[0]})
     }
 }
 
