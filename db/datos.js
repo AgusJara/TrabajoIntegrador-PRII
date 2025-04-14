@@ -1,8 +1,8 @@
 const datos ={
     usuario: [
       {
-            email: 'martingomez@gmail.com',
-            usuario: 'Martin',
+            email: 'martinagomez@gmail.com',
+            usuario: 'Martina',
             contraseña: 'mar1234',
             fechaDeNacimiento: '24/11/2003',
             nroDeDocumento: '43234567',
@@ -13,9 +13,9 @@ const datos ={
 
     productos: [
         {
-            nombre: "Cafetera",
-            descripcion: "Cafetera linda para el invierno.",
-            imagen: "img-cafetera-moulinex.jpg",
+            nombre: "Set de beisbol",
+            descripcion: "Un set buenisimo para jugar al beisbol.",
+            imagen: "beisbol.jpg",
             id: 1,  
             comentarios: [
               {
@@ -36,9 +36,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Macbook",
-            descripcion: "Macbook para que disfrutes programar.",
-            imagen: "img-macbook-pro-2019.jpg",
+            nombre: "Pesas",
+            descripcion: "Buenas para hacer gimnasia.",
+            imagen: "fotoPesas.jpg",
             id: 2, 
             comentarios: [
               {
@@ -59,9 +59,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Samsung",
-            descripcion: "Telefono samsung negro de buena calidad.",
-            imagen: "img-samsung-galaxy-s10.jpg",
+            nombre: "Palo de hockey",
+            descripcion: "Lindo palo y comodo para las delanteras.",
+            imagen: "paloDeHockey.jpg",
             id: 3,
             comentarios: [
               {
@@ -72,9 +72,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Television samsung",
-            descripcion: "Television grande de samsung buenisimo para ver peliculas.",
-            imagen: "img-tv-samsung-smart.jpg",
+            nombre: "Pelota de rugby",
+            descripcion: "Para disfrutar el juego con tus amigos",
+            imagen: "pelotaDeRugby.jpg",
             id: 4, 
             comentarios: [
               {
@@ -90,9 +90,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Apple pencil",
-            descripcion: "Lapiz tecnologico para usar con tu ipad.",
-            imagen: "apple-pencil.webp", 
+            nombre: "Cinta de correr",
+            descripcion: "Corre en tu casa de una forma comoda y segura!",
+            imagen: "cinta.webp", 
             id: 5,
             comentarios: [
               {
@@ -113,9 +113,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Headphones",
-            descripcion: "Auriculares para disfrutar la musica que te gusta.",
-            imagen: "headphones.png",
+            nombre: "Raqueta de tenis",
+            descripcion: "Muy eficiente y profesional para el saque.",
+            imagen: "raquetaTenis.jpg",
             id: 6,
             comentarios: [
               {
@@ -136,9 +136,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Lavarropas",
-            descripcion: "Lava tu ropa de forma sencilla y rapida.",
-            imagen: "lavarropas.png",
+            nombre: "Auriculares",
+            descripcion: "Auriculares buenisimos para escuchar la musica que quieras.",
+            imagen: "headphones.png",
             id: 7,
             comentarios: [
               {
@@ -182,9 +182,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Pesas",
-            descripcion: "Pesas para formar tu cuerpo.",
-            imagen: "pesas.webp",
+            nombre: "Pelota de futbol",
+            descripcion: "Para jugar con tus amigos y pasar el rato.",
+            imagen: "pelotaFutbol.jpg",
             id: 9,
             comentarios: [
               {
@@ -196,9 +196,9 @@ const datos ={
             ]
           },
           {
-            nombre: "Plancha",
-            descripcion: "Para que tu ropa quede en perfecto estado.",
-            imagen: "plancha.webp",
+            nombre: "Termos",
+            descripcion: "Para estar bien hidratado mientras hagas gimnasia.",
+            imagen: "termos.webp",
             id: 10,
             comentarios: [
               {
