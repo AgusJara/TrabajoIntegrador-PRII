@@ -6,14 +6,14 @@
 
 <body>
 	<!-- Header -->
-	<%- include('./partials/headerLogueado', {nombre: profile.usuario}) %>
+	<%- include('./partials/headerLogueado',{nombre: profile.usuario}) %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title"> Resultados de búsqueda </h2>
+				<h2 class="products-title"> Todos los productos </h2>
 			</div>
 		
 			<% for(i=0; i<productos.length; i++) { %>

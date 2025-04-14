@@ -9,7 +9,7 @@
 				</div>
 	
 				<div class="col-7 col-md-6">
-					<form action="search-results.html" method="GET" class="search-form"> 	<!-- fijarse ruta en action si es /products -->
+					<form action="/resultados" method="GET" class="search-form"> 	<!-- fijarse ruta en action si es /products -->
 						<input type="text" name="search" placeholder="Buscar productos, marcas y más"class="search-form_input">
 						<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
 					</form>
@@ -29,7 +29,7 @@
 	
 			<nav class="main-navbar">
 				<ul class="left-navbar">
-					<li><a href="/">Todos los productos</a></li>
+					<li><a href="/productos">Todos los productos</a></li> <!--NOSE SI DEJARLO COMO ESTABA == "/" O PONER A PRODUCTOS-->
 					<!-- < if(profile){ %>
 						<li><a href="/product/agregar">Cargar productos</a></li>
 					< } %> --> 

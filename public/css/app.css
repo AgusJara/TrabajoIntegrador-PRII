@@ -10,14 +10,14 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --base-font-family: "Nunito Sans", sans-serif;
+  --color-main: rgb(26, 180, 197);
 }
 
 
 /*====== Basics ======*/
 * {
   box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
 }
 
 html,
@@ -42,6 +42,8 @@ ol {
 
 a {
   display: inline-block;
+  font-style: italic;
+  font-weight: bold;
   text-decoration: none;
   color: rgb(22, 130, 237);
 }
@@ -65,19 +67,17 @@ hr {
   border-bottom: solid 1px var(--light-gray);
 }
 
-h1,h2,h3,h4{
+h1,h2,h3,h4 {
   font-family: "Roboto Slab", serif;
 }
 
 
 /*====== Main Header ======*/
-.col-12{ /* Agregamos nosotros porque no estaba*/
-  font-family: "Roboto Slab", serif;
-}
+
 
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: var(--color-main);
 }
 
 .main-header_home-link,
@@ -233,6 +233,7 @@ h1,h2,h3,h4{
   height: 0;
   transition: 300ms;
   overflow: hidden;
+  font-family: var(--base-font-family);
 }
 
 .product-box_data i {
@@ -443,6 +444,9 @@ h1,h2,h3,h4{
 }
 .user a{ /* Agregamos nosotros porque no estaba*/
   color: rgb(22, 130, 237);
+}
+.user p{
+  font-family: var(--base-font-family);
 }
 /*====== Formularios ======*/
 .form-label {
