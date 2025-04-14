@@ -9,4 +9,3 @@ router.get('/resultados', homeController.resultadosBusqueda)
 
 module.exports = router;
 
-// pasar a controlador 

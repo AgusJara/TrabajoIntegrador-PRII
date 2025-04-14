@@ -1,11 +1,6 @@
 let datos = require('../db/datos')
 
 let productoController= {
-    index:function(req,res) {
-        res.render('products',{productos: datos.productos,
-                               profile: datos.usuario[0]
-        })
-    },
     agregar: function(req,res){
         res.render('product-add', {profile: datos.usuario[0]}) //
     }, 

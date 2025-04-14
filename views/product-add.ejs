@@ -13,10 +13,9 @@
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Agregar productos</h2>
-			</div>
+			
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
-		
+			<h2 class="col-12"> Productos agregados </h2>
 			<form action="/users" method="get">
 				<label for="imagen"> Imagen: </label>
 				<input type="file" id="imagen" name="imagen" required>
@@ -26,12 +25,11 @@
 
 				<label for="descripcion"> Descripción: </label>
 				<input type="text" id="descripcion" name="descripcion" required>
-
 				<button type="submit"> Enviar </button>
 
 			</form>
 
-
+		</div>
 	
 	<%- include('./partials/footer') %>
 </body>

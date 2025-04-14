@@ -3,7 +3,7 @@ const datos ={
       {
             email: 'martinagomez@gmail.com',
             usuario: 'Martina',
-            contraseña: 'mar1234',
+            contrasenia: 'mar1234',
             fechaDeNacimiento: '24/11/2003',
             nroDeDocumento: '43234567',
             fotoDePerfil: 'fotoMujerDos.jpg'
