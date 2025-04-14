@@ -7,7 +7,7 @@ let productoController= {
         })
     },
     agregar: function(req,res){
-        res.render('product-add', {usuario: datos.usuario[0]}) //
+        res.render('product-add', {profile: datos.usuario[0]}) //
     }, 
     
     detalle: function(req,res){

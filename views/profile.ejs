@@ -3,7 +3,7 @@
 <!-- Include Head -->
 <%- include('./partials/head') %>
 <body>
-	<%- include('./partials/headerLogueado', {nombre: profile.usuario}) %>
+	<%- include('./partials/headerLogueado') %>
 
 	<!-- Datos del usuario -->
 	<section class="info-usuario container products-wrapper">
@@ -14,7 +14,7 @@
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title"><%=profile.usuario  %> 
-						<a href="profile-edit.html"> <!-- CONSULTAR !!!!!! -->
+						<a href="/users"> <!-- dejamos /users para que no mande error -->
 							<i class="fas fa-cog"></i>
 						</a>
 					</h1>
