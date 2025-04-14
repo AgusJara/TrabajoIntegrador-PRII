@@ -7,8 +7,8 @@
   --yellow: #EAC926;
   --dark-blue: #03264C;
   --light-blue: #1259c3;
-  --gray: #666666;
-  --light-gray: #e6ecec;
+  --gray: #7c7979;
+  --light-gray: #c2c7c7;
   --green: #39b54a;
   --base-font-family: "Nunito Sans", sans-serif;
   --color-main: #c7e6f5;
@@ -104,13 +104,13 @@ div.row .col-12{
 .main-header {
   padding: 15px 0;
   
-  background-color: grey;
+  background-color: rgb(145, 145, 145);
 }
 
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
-  color: lightgrey;
+  color: rgb(250, 247, 247);
 }
 
 .main-header_credit-link {
@@ -308,7 +308,7 @@ div.row .col-12{
 
 /*====== Footer ======*/
 .main-footer {
-  background-color: grey;
+  background-color: #7c7979;
   padding: 20px 0;
   margin-top: 80px;
 }
@@ -318,19 +318,19 @@ div.row .col-12{
 }
 
 .footer-data i {
-  color: lightgrey;
+  color: rgb(170, 166, 166);
   font-size: 3.5em;
 }
 
 .footer-data h2 {
-  color: var(--gray);
+  color: #adaaaa; 
   font-size: 2.4em;
   font-weight: 400;
   font-family: "Roboto Slab", serif;
 }
 
 .footer-data p {
-  color: var(--gray);
+  color: #adaaaa;
   font-size: 1.5em;
   font-weight: 300;
 }
@@ -545,9 +545,11 @@ textarea.form-input {
 .nombres{     
   padding: 15px 20px;
   margin: 20px auto;
-  font-family: 'Times New Roman', 'Sans-serif';
-  font-size: 16px;
+  font-family: 'Roboto Slab', 'Sans-serif';
+  font-size: 20px;
   border-radius: 8px;
+  color: #adaaaa;
+  font-weight: bold;
 }
 
 .nombre-logo {
