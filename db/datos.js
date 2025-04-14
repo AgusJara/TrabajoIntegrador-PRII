@@ -20,7 +20,7 @@ const datos ={
             comentarios: [
               {
                 usuario: "jbernstein@udesa.edu.ar" ,
-                texto: 'Buenisima!! Me viene durando barbaro', 
+                texto: 'Buenisimo!! Me viene durando barbaro', 
                 imagen: 'fotoMujerUno.jpg',  
               } , 
               {
@@ -30,7 +30,7 @@ const datos ={
               } , 
               {
                 usuario: "agusjara@gmail.com" ,
-                texto: 'Mega estetica!', 
+                texto: 'Mega estetico!', 
                 imagen: 'fotoHombreDpos.jpg',   
               } 
             ]
@@ -43,17 +43,17 @@ const datos ={
             comentarios: [
               {
                 usuario: "jbernstein@udesa.edu.ar" ,
-                texto: 'cuantas gb tiene?', 
+                texto: 'cuanto peso tienen?', 
                 imagen: 'fotoMujerUno.jpg',    
               } , 
               {
                 usuario: "delfina@yahoo.com" ,
-                texto: 'Es un aviooooon!!!!!', 
+                texto: 'Son un aviooooon!!!!!', 
                 imagen: 'fotoMujerDos.jpg',  
               } , 
               {
                 usuario: "agusjara@gmail.com" ,
-                texto: 'Viene en negro?', 
+                texto: 'Vienen en negro?', 
                 imagen: 'fotoHombreDpos.jpg'  
               } , 
             ]
@@ -66,7 +66,7 @@ const datos ={
             comentarios: [
               {
                 usuario: "jbernstein@udesa.edu.ar" ,
-                texto: 'Me gusta que no tengo boton!! Comodisimo', 
+                texto: 'Me gusta!! Comodisimo', 
                 imagen: 'fotoMujerUno.jpg',   
               } , 
             ]
@@ -79,12 +79,12 @@ const datos ={
             comentarios: [
               {
                 usuario: "delfina@yahoo.com" ,
-                texto: 'Tremendo como se ve, muy HD', 
+                texto: 'Tremendaaaaa', 
                 imagen: 'fotoMujerDos.jpg',  
               } ,  
               {
                 usuario: "agusjara@gmail.com" ,
-                texto: 'Realmente de locos el tamaño', 
+                texto: 'Realmente de locos ', 
                 imagen: 'fotoHombreDpos.jpg'   
               }  
             ]
@@ -102,7 +102,7 @@ const datos ={
               } , 
               {
                 usuario: "delfina@yahoo.com" ,
-                texto: 'Sirve para el ipad pro?', 
+                texto: 'Se concecta con el ipad esta?', 
                 imagen: 'fotoMujerDos.jpg',   
               } , 
               {
@@ -120,7 +120,7 @@ const datos ={
             comentarios: [
               {
                 usuario: "jbernstein@udesa.edu.ar" ,
-                texto: 'Se escucha bien?', 
+                texto: 'Comoda ?', 
                 imagen: 'fotoMujerUno.jpg',  
               } , 
               {
@@ -130,7 +130,7 @@ const datos ={
               } , 
               {
                 usuario: "agusjara@gmail.com" ,
-                texto: 'Muy duraderos! Chocho con mi compra', 
+                texto: 'Muy duradera! Chocho con mi compra', 
                 imagen: 'fotoHombreDpos.jpg',   
               } 
             ]
@@ -143,7 +143,7 @@ const datos ={
             comentarios: [
               {
                 usuario: "jbernstein@udesa.edu.ar" ,
-                texto: 'jajaja! hace mucho ruido...', 
+                texto: 'jajaja! me encantaron', 
                 imagen: 'fotoMujerUno.jpg',  
               } , 
               {
@@ -153,7 +153,7 @@ const datos ={
               } , 
               {
                 usuario: "agusjara@gmail.com" ,
-                texto: 'Cuanto pesa?', 
+                texto: 'Cuanto pesan?', 
                 imagen: 'fotoHombreDpos.jpg',   
               } 
             ]
@@ -171,7 +171,7 @@ const datos ={
               } , 
               {
                 usuario: "delfina@yahoo.com" ,
-                texto: 'Muy buena calidad! Lo recomiendo', 
+                texto: 'Muy buena calidad! La recomiendo', 
                 imagen: 'fotoMujerDos.jpg',   
               } , 
               {
@@ -189,7 +189,7 @@ const datos ={
             comentarios: [
               {
                 usuario: "jbernstein@udesa.edu.ar" ,
-                texto: 'Las tienen en negro?', 
+                texto: 'La tienen en negro y blanco?', 
                 imagen: 'fotoMujerUno.jpg',  
               } , 
               
@@ -203,7 +203,7 @@ const datos ={
             comentarios: [
               {
                 usuario: "delfina@yahoo.com" ,
-                texto: 'Cuanto mide el cable? Maso', 
+                texto: 'Cuanto contiene ??? Necesito!!', 
                 imagen: 'fotoMujerDos.jpg',   
               } 
             ]
