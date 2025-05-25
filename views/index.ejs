@@ -3,8 +3,12 @@
 <!-- Include Head -->
 <%- include('./partials/head') %>
 <body>
-	<!-- INCLUIR PARTIALS HEADER -->
-	<%- include('./partials/header') %>  
+	<!-- INCLUIR PARTIALS HEADER --> 
+	<% if (locals.usuarioLogueado != undefined) { %>
+		<%- include('./partials/headerLogueado')%>
+	<% } else { %>
+		<%- include('./partials/header')%>
+	<% } %>
 	
 	<!-- Banner -->
 	<div class="banner">

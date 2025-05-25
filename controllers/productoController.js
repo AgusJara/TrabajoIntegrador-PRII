@@ -1,4 +1,5 @@
 let datos = require('../db/datos')
+// acordarse de hacer vairable de db
 
 let productoController= {
     agregar: function(req,res){

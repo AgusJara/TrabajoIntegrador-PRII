@@ -4,7 +4,11 @@
 <%- include('./partials/head') %>
 
 <body>
-	<%- include('./partials/header') %>
+	<% if (locals.usuarioLogueado != undefined) { %>
+		<%- include('./partials/headerLogueado')%>
+	<% } else { %>
+		<%- include('./partials/header')%>
+	<% } %>
 	
 	<!-- Novedades -->
 	<div class="container products-wrapper">
@@ -12,15 +16,15 @@
 			<div class="col-12">
 				<h2 class="products-title">Ingresar</h2>
 				<h2 class="col-12"> Login: </h2>
-				<form action="/users" method="get"> 
+				<form action="/users/procesandoLogin" method="POST"> 
 					<label for="usuario"> Email </label>
 					<input type="email" id="usuario" name="usuario" placeholder="Ingrese email aca"required> 
 	
-					<label for="contrasena"> Contraseña</label>
-					<input type="password" id="contraseña" name="contraseña" placeholder="Ingrese contraseña aca" required> 
+					<label for="constrasenia"> Contraseña</label>
+					<input type="password" id="constrasenia" name="constrasenia" placeholder="Ingrese contraseña aca" required> 
 					<div class="recordar">
 						<label for="recordar"> Desea ser recordado?</label>
-						<input type="checkbox" required> 
+						<input type="checkbox" name="tyc" > 
 					</div>
 					<button type="submit"> Login </button>
 				</form>
