@@ -23,7 +23,6 @@ let usersController = {
             return res.render('login');
         }   
 
-
     },
 
     procesandoLogin: function (req, res,) {
