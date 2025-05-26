@@ -564,6 +564,11 @@ textarea.form-input {
   color: rgb(22, 130, 237);  Chequear porque no se como llamar a la clase
 } */
 
+.usuario {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {

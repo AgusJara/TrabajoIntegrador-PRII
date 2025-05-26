@@ -12,7 +12,10 @@ let homeController = {
       resultadosBusqueda: function (req,res){
         let busqueda= req.query.search
         db.Product.findAll({
-          where: {nombre: {[op.like]: '%' + busqueda + '%'}}
+          where: {nombre: {[op.like]: '%' + busqueda + '%'}},
+          include: [
+            {association: 'producto_usuario'},
+          ]
         })
         .then(function(resultado){
           res.render('search-results', {productos: resultado})
