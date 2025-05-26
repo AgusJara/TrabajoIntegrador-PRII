@@ -1,4 +1,6 @@
 let datos = require('../db/datos');
+const db= require('../database/models')
+let op = db.Sequelize.Op;
 
 let homeController = {
     index: function(req, res) {
@@ -8,9 +10,15 @@ let homeController = {
       }, 
 
       resultadosBusqueda: function (req,res){
-        res.render('search-results', {productos: datos.productos, profile: datos.usuario[0]})
+        let busqueda= req.query.search
+        db.Product.findAll({
+          where: {nombre: {[op.like]: '%' + busqueda + '%'}}
+        })
+        .then(function(resultado){
+          res.render('search-results', {productos: resultado})
+        })
       }
 
-}
+};
 
 module.exports = homeController;

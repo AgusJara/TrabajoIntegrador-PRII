@@ -29,16 +29,6 @@ app.use(function(req, res, next) {
 	
 	return next();
 });
-//app.use (function(req,res,next) { // esto es extra
- // console.log(req.cookies.datosusuario)
- // console.log(req.session.userLogueado)
- // console.log(res.locals.usuarioLogueado)
- //if (req.cookies.datosusuario != undefined && req.session.userLogueado == undefined){
- // req.session.userLogueado = req.cookies.datosusuario
- // res.locals.usuarioLogueado = req.cookies.datosusuario
-// }
- //return next ();
-//})
 
 app.use(logger('dev'));
 app.use(express.json());
