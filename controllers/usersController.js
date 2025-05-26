@@ -107,6 +107,13 @@ let usersController = {
                 return res.send(error)
             })
     },
+    logout: function (req,res) {
+        res.clearCookie('datosusuario');
+        req.session.destroy(function () {
+            res.redirect('/')
+        })
+
+    }
 }
 
 module.exports = usersController;
