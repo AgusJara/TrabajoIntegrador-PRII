@@ -91,16 +91,17 @@ let usersController = {
                 }
 
                 return db.User.create({
-                    nombre: req.body.usuario,
+                    usuario: req.body.usuario,
                     email: req.body.email,
                     constrasenia: bcrypt.hashSync(req.body.constrasenia, 10),
                     fechaDeNacimiento: req.body.fechaNacimiento,
                     nroDeDocumento: req.body.documento,
+                    fotoDePerfil: req.body.fotoPerfil
                 });
             })
             .then(function (nuevoUsuario) {
                 if (nuevoUsuario) {
-                    res.redirect('/users')
+                    res.redirect('/users/login')
                 }
             })
             .catch(function (error) {

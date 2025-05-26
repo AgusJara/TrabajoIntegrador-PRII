@@ -9,5 +9,6 @@ router.get('/register', usersController.register);
 router.post('/registro', usersController.show);
 
 router.post('/procesandoLogin', usersController.procesandoLogin); 
+router.get('/logout',usersController.logout);
 
 module.exports = router;

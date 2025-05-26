@@ -1,3 +1,5 @@
+const { usuario } = require("../../db/datos")
+
 module.exports= function(Sequelize, DataTypes) {
     let alias= 'User'
     let cols= {
@@ -5,6 +7,10 @@ module.exports= function(Sequelize, DataTypes) {
             primaryKey: true, 
             autoIncrement: true,
             type: DataTypes.INTEGER.UNSIGNED,
+        },
+        usuario:{
+            type:DataTypes.STRING(25),
+            notNull: true,
         },
         email: {
             type: DataTypes.STRING(100),

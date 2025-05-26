@@ -3,6 +3,7 @@ USE trabajoIntegrador;
 
 CREATE TABLE users(
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT ,
+    usuario VARCHAR(25) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE , 
     constrasenia VARCHAR(255) NOT NULL , 
     fechaDeNacimiento DATE NOT NULL , 
@@ -40,13 +41,13 @@ CREATE TABLE comentarios(
     
 );
 
-INSERT INTO users (id,email,constrasenia,fechaDeNacimiento,nroDeDocumento,fotoDePerfil)
+INSERT INTO users (id,usuario,email,constrasenia,fechaDeNacimiento,nroDeDocumento,fotoDePerfil)
 VALUES
-(DEFAULT,"martinagomez@gmail.com","mar1234","2003-11-24",43234567,"fotoMujerDos.jpg"),
-(DEFAULT,"jbernstein@udesa.edu.ar","jbern1234","2004-10-15",45678987,"fotoMujerUno.jpg"),
-(DEFAULT,"delfina@yahoo.com","delfi1234","2005-09-08",47234569,"fotoUno.jpg"),
-(DEFAULT,"agusjara@gmail.com","agus1234","2004-12-24",46279494,"fotoHombreDpos.jpg"),
-(DEFAULT,"maria@gmail.com","maria1234","2006-03-24",49235568,"fotoMujerDos.jpg");
+(DEFAULT,"Martu","martinagomez@gmail.com","mar1234","2003-11-24",43234567,"fotoMujerDos.jpg"),
+(DEFAULT,"Juana","jbernstein@udesa.edu.ar","jbern1234","2004-10-15",45678987,"fotoMujerUno.jpg"),
+(DEFAULT,"Delfi","delfina@yahoo.com","delfi1234","2005-09-08",47234569,"fotoUno.jpg"),
+(DEFAULT,"Agus","agusjara@gmail.com","agus1234","2004-12-24",46279494,"fotoHombreDpos.jpg"),
+(DEFAULT,"Maria","maria@gmail.com","maria1234","2006-03-24",49235568,"fotoMujerDos.jpg");
 
 INSERT INTO products (id,id_users,imagen,nombre,descripcion)
 VALUES
