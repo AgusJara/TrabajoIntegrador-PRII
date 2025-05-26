@@ -8,7 +8,7 @@ let usersController = {
     index: function (req, res) {
         users.findAll()
             .then(function (data) {
-                //return res.send(data)
+                //return res.send(data) 
                 res.render('profile', {
                     profile: data[0],
                     producto: datos.productos

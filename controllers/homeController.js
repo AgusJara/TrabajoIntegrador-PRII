@@ -4,9 +4,17 @@ let op = db.Sequelize.Op;
 
 let homeController = {
     index: function(req, res) {
-        res.render('index', { profile: datos.usuario[0],
-                              productos: datos.productos,
-         });
+      db.Product.findAll ({
+        include: [
+          {association: 'producto_usuario'}, 
+        ]
+      })
+      .then(function(produ){ 
+       
+        res.render('index', {productos : produ})
+
+      })
+        
       }, 
 
       resultadosBusqueda: function (req,res){

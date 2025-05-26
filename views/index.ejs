@@ -23,6 +23,8 @@
 				<h2 class="products-title">Productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
+
+			<!-- PARA MOSTRAR TODOS LOS PRODUCTOS, LA RUTA DE PUBLICADO POR NO FUNCIONA!!!! VER BIEN CON LA VIEW DE PROFILE-->
 			<% for(i=0; i<productos.length; i++) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
@@ -33,12 +35,15 @@
 							<article class="product-box_data">
 								<h2> <%= productos[i].nombre %> </h2>
 								<p> <%= productos[i].descripcion %> </p>
-							    <p>Comentarios: <%= productos[i].comentarios.length %> </p>  
 							</article>
 						</a>
+						<p class="usuario"> Publicado por: <a href="/users/profile/<%=productos[i].producto_usuario.id%>"> <%= productos[i].producto_usuario.usuario %>
+						</a>
+						</p>
 					</section>
 				</div>
 			<% } %>
+
 			
 		</div>
 	</div>
