@@ -6,14 +6,18 @@ let users = db.User
 
 let usersController = {
     index: function (req, res) {
-        users.findAll()
-            .then(function (data) {
-                //return res.send(data) 
-                res.render('profile', {
-                    profile: data[0],
-                    producto: datos.productos
-                });
-            })
+       users.findByPk(req.params.id)
+        .then (function (user){
+          //res.send(user)
+            res.render ('profile', {usuario: user})
+        })
+       // users.findAll()
+           // .then(function (data) {
+               // return res.send(data) 
+              //  res.render('profile', {
+                 //   usuario: data, 
+             //   });
+          //  })
 
     },
     login: function (req, res,) {
