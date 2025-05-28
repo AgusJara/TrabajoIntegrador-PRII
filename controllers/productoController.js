@@ -11,21 +11,24 @@ let productoController= {
       db.Product.create({
         imagen:req.body.imagen,
         nombre:req.body.nombre,
-        descripcion:req.body.descripcion
+        descripcion:req.body.descripcion,
+        id_users:req.session.userLogueado.id
+      })
+      .then(function () {
+        res.redirect('/users/profile/' + req.session.userLogueado.id)
+      })
+      .catch(function (error) {
+        return res.send("Error al crear producto" + error)
       })
     },
     
     detalle: function(req,res){
-      let resultado = {};
-    
-      for (let i = 0; i < datos.productos.length; i++) {
-        let prod= datos.productos[i];
-    
-        if (prod.id == req.params.id) {
-          resultado = prod;
-        }
-      }
-      res.render('product', {producto: resultado});
+      db.Product.findByPk(req.params.id,{
+        include: [{association:'producto_usuario'},{association:'producto_comentario',include:['comentario_usuario']}]
+      })
+      .then(function (productos) {
+        return res.render('product',{producto:productos,comentario:productos.producto_comentario})
+      })
   },
    
 }

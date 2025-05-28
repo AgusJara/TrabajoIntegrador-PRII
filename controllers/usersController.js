@@ -2,22 +2,28 @@ let datos = require('../db/datos')
 let bcrypt = require('bcryptjs')
 
 const db = require('../database/models')
+const { where } = require('sequelize')
 let users = db.User
 
 let usersController = {
     index: function (req, res) {
-       users.findByPk(req.params.id)
-        .then (function (user){
-          //res.send(user)
-            res.render ('profile', {usuario: user})
+        users.findByPk(req.params.id,{
+            include:[{association:'usuario_producto'}]
         })
-       // users.findAll()
-           // .then(function (data) {
-               // return res.send(data) 
-              //  res.render('profile', {
-                 //   usuario: data, 
-             //   });
-          //  })
+            .then (function (user){
+          //res.send(user)
+                res.render ('profile', {usuario: user, productos: user.usuario_producto})
+        })
+    },
+    
+    profile: function (req,res) { //codigo nuevo de la ruta nueva para usuario logueado
+        users.findByPk(req.session.userLogueado.id,{
+            include: [{association:'usuario_producto'},{association:'usuario_comentario'}]
+        })
+        .then(function (usuario) {
+            return res.render('profile',{usuario:usuario, productos: usuario.usuario_producto})
+        })
+    
 
     },
     login: function (req, res,) {
