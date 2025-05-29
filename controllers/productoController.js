@@ -27,10 +27,25 @@ let productoController= {
         include: [{association:'producto_usuario'},{association:'producto_comentario',include:['comentario_usuario']}]
       })
       .then(function (productos) {
+    
         return res.render('product',{producto:productos,comentario:productos.producto_comentario})
       })
-  },
-   
+   },
+
+    comentarios: function(req,res){
+         db.Comentario.create({
+          include: [{association:'comentario_producto'}],
+        texto: req.body.texto,
+        id_users: req.session.userLogueado.id,
+        id_imagen: req.params.id,
+      })
+      .then(function(data){
+        res.redirect('/productos/detalle/' + req.params.id)
+      })
+      .catch(function (error) {
+        return res.send("Error al crear producto" + error)
+      })
+    },
 }
 
 module.exports = productoController;

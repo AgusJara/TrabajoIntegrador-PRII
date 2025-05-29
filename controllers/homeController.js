@@ -10,8 +10,8 @@ let homeController = {
         ]
       })
       .then(function(produ){ 
-       //res.send (produ)
-        res.render('index', {productos : produ})
+        //res.send (produ)
+        res.render('index', {productos: produ})
 
       })
         
