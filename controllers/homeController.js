@@ -1,4 +1,4 @@
-let datos = require('../db/datos');
+let datos = require('../db/datos'); // borrar
 const db= require('../database/models')
 let op = db.Sequelize.Op;
 
@@ -10,9 +10,11 @@ let homeController = {
         ]
       })
       .then(function(produ){ 
-        //res.send (produ)
         res.render('index', {productos: produ})
 
+      })
+      .catch(function (error) {
+        return res.send("Error al cargar productos" + error)
       })
         
       }, 

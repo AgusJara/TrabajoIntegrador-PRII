@@ -1,10 +1,9 @@
 let datos = require('../db/datos')
-// acordarse de hacer vairable de db
 const db = require('../database/models')
 
 let productoController= {
     agregar: function(req,res){
-      res.render('product-add', {profile: datos.usuario[0]}) //
+      res.render('product-add', {profile: datos.usuario[0]}) 
     },
     
     create: function (req,res) {
@@ -43,7 +42,7 @@ let productoController= {
         res.redirect('/productos/detalle/' + req.params.id)
       })
       .catch(function (error) {
-        return res.send("Error al crear producto" + error)
+        return res.send("Error al crear comentario" + error)
       })
     },
 }

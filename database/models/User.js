@@ -1,4 +1,4 @@
-const { usuario } = require("../../db/datos")
+const { usuario } = require("../../db/datos") 
 
 module.exports= function(Sequelize, DataTypes) {
     let alias= 'User'

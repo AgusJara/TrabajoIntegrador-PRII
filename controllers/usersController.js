@@ -1,8 +1,8 @@
-let datos = require('../db/datos')
+let datos = require('../db/datos') // borrar 
 let bcrypt = require('bcryptjs')
 
 const db = require('../database/models')
-const { where } = require('sequelize')
+const { where } = require('sequelize') 
 let users = db.User
 
 let usersController = {
@@ -11,12 +11,11 @@ let usersController = {
             include:[{association:'usuario_producto'}]
         })
             .then (function (user){
-          //res.send(user)
                 res.render ('profile', {usuario: user, productos: user.usuario_producto})
         })
     },
     
-    profile: function (req,res) { //codigo nuevo de la ruta nueva para usuario logueado
+    profile: function (req,res) { 
         users.findByPk(req.session.userLogueado.id,{
             include: [{association:'usuario_producto'},{association:'usuario_comentario'}]
         })
@@ -38,7 +37,7 @@ let usersController = {
     procesandoLogin: function (req, res,) {
         
         db.User.findOne({
-            where: [{ email: req.body.usuario }], // que el mail sea igual al que escribio el usuario 
+            where: [{ email: req.body.usuario }], 
 
         })
             .then(function (user) {
@@ -56,7 +55,7 @@ let usersController = {
                             
 
                             res.cookie('datosusuario', req.session.userLogueado, { maxAge: 1000 * 60 * 5 });
-                            // creamos una cookie con los datos del usuario.
+                            
                         }
 
                         
@@ -68,7 +67,6 @@ let usersController = {
                     }
 
                 } else {
-                    console.log('no existe')
                     res.send('El usuario no tiene una cuenta')
                 }
 
