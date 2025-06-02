@@ -1,5 +1,3 @@
-const { usuario } = require("../../db/datos") 
-
 module.exports= function(Sequelize, DataTypes) {
     let alias= 'User'
     let cols= {

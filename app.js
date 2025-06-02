@@ -9,7 +9,6 @@ var usersRouter = require('./routes/users');
 var productoRouter = require ('./routes/producto');
 const session = require('express-session') ;
 
-
 var app = express();
 
 // view engine setup
@@ -24,7 +23,6 @@ app.use(function(req, res, next) {
   //console.log(req.session.user)
   if (req.session.userLogueado != undefined) {
     res.locals.usuarioLogueado = req.session.userLogueado
-
   }
 	
 	return next();

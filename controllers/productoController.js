@@ -1,9 +1,12 @@
-let datos = require('../db/datos')
 const db = require('../database/models')
 
 let productoController= {
     agregar: function(req,res){
-      res.render('product-add', {profile: datos.usuario[0]}) 
+       if(req.session.userLogueado == undefined ){
+            return res.redirect('/')
+        } else {
+            return res.render('product-add');
+        }   
     },
     
     create: function (req,res) {
@@ -33,7 +36,6 @@ let productoController= {
 
     comentarios: function(req,res){
          db.Comentario.create({
-          include: [{association:'comentario_producto'}],
         texto: req.body.texto,
         id_users: req.session.userLogueado.id,
         id_imagen: req.params.id,
