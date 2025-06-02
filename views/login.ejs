@@ -27,9 +27,14 @@
 						<input type="checkbox" name="tyc" > 
 					</div>
 					<button type="submit"> Login </button>
+					<% if(error != undefined) { %>
+						<p class="errorCentrar"> <%= error %> </p>
+					<% } %>
 				</form>
 	
 			</div>
+	
+			
 
 			
 

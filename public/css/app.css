@@ -569,6 +569,10 @@ textarea.form-input {
   font-size: 14px;
   text-align: center;
 }
+.errorCentrar {
+  font-size: 15px;
+  font-weight: bold;
+}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {

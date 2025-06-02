@@ -18,7 +18,7 @@ let usersController = {
         if (req.session.userLogueado != undefined) {
             return res.redirect('/')
         } else {
-            return res.render('login');
+            return res.render('login',{error: ''});
         }
     },
 
@@ -40,10 +40,10 @@ let usersController = {
                         }
                         return res.redirect('/users/profile/' + user.id )
                     } else {
-                        return res.send('La contrasena ingresada esta mal')
+                        return res.render('login',{error: 'La contrasena ingresada es incorrecta'})
                     }
                 } else {
-                    res.send('El usuario no tiene una cuenta')
+                    res.render('login',{error: 'El usuario no tiene cuenta. Registrate!'})
                 }
             })
             .catch(function (error) {
