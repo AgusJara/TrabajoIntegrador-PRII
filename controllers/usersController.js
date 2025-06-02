@@ -54,25 +54,25 @@ let usersController = {
         if (req.session.userLogueado != undefined) {
             return res.redirect('/')
         } else {
-            return res.render('register')
+            return res.render('register', {error: ''})
         }
     },
     procesandoRegistro: function (req, res) {
         if (req.body.email == '') {
-            return res.send('El email no puede estar vacio.')
+            return res.render('register', {error: 'El email no puede estar vacio.'})
         }
 
         if (req.body.constrasenia.length < 3) {
-            return res.send('La contraseña debe tener al menos 3 caracteres.');
+            return res.render('register', {error: 'La contraseña debe tener al menos 3 caracteres.'});
         }
 
         db.User.findOne({ where: [{ email: req.body.email }] })
             .then(function (userExistente) {
                 if (userExistente) {
-                    return res.send('El email ya esta registrado.')
+                    return res.render('register', {error: 'El email ya esta registrado.'})
                 } 
 
-                return db.User.create({
+                db.User.create({
                     usuario: req.body.usuario,
                     email: req.body.email,
                     constrasenia: bcrypt.hashSync(req.body.constrasenia, 10),
@@ -80,11 +80,19 @@ let usersController = {
                     nroDeDocumento: req.body.documento,
                     fotoDePerfil: req.body.fotoPerfil
                 })
-            })
-            .then(function (nuevoUsuario) {
+                 .then(function (nuevoUsuario) {
                 if (nuevoUsuario) {
                     return res.redirect('/users/login')
                 }
+            })
+             .catch(function (error) {
+                return res.send(error)
+            })
+        
+            })
+           
+             .catch(function (error) {
+                return res.send(error)
             })
     },
     logout: function (req, res) {

@@ -32,6 +32,10 @@
 					<label for="fotoPerfil"> Foto de perfil: (URL) </label>
 					<input type="text" id="fotoPerfil" name="fotoPerfil" placeholder="URL" required>
 					<button type="submit"> Registrarse </button>
+
+					<% if(error != undefined) { %>
+						<p> <%= error %> </p>
+					<% } %>
 				</form>
 			</div>
 

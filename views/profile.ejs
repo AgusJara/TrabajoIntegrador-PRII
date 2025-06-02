@@ -16,9 +16,9 @@
 						<img src="/images/users/<%=usuario.fotoDePerfil%>" alt="foto de perfil" class="foto-perfil"> 
 			</div>
 			<div class="data-container col-6">
-				<div class="d-flex align-items-center ">
+				<div class="d-flex align-items-center">
 					<h1 class="main-title"><%=usuario.usuario%> 
-						<a href="/users">
+						<a href="/users/profile/<%=usuario.id%>">
 							<i class="fas fa-cog"></i>
 						</a>
 					</h1>
@@ -27,7 +27,7 @@
 				<div>
 					<p><%=usuario.email%></p>  
 					<ul>
-						<li> Productos: <%=productos.length%> </li> <!-- ESTO TIENE QUE SER DINAMICO!!! -->
+						<li> Productos: <%=productos.length%> </li> 
 						<li>200 seguidores</li>
 						<li> <%=usuario.usuario_comentario.length%> comentarios</li>
 					</ul>
