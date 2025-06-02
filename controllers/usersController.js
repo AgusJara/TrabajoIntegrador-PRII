@@ -1,5 +1,4 @@
 let bcrypt = require('bcryptjs')
-
 const db = require('../database/models')
 let users = db.User
 
@@ -39,7 +38,7 @@ let usersController = {
                         if (recordarme == 'on') {
                             res.cookie('datosusuario', req.session.userLogueado, { maxAge: 1000 * 60 * 5 });
                         }
-                        return res.redirect('/')
+                        return res.redirect('/users/profile/' + user.id )
                     } else {
                         return res.send('La contrasena ingresada esta mal')
                     }
@@ -71,7 +70,7 @@ let usersController = {
             .then(function (userExistente) {
                 if (userExistente) {
                     return res.send('El email ya esta registrado.')
-                }
+                } 
 
                 return db.User.create({
                     usuario: req.body.usuario,
@@ -89,7 +88,7 @@ let usersController = {
             })
     },
     logout: function (req, res) {
-        res.clearCookie('datosusuario');
+        res.clearCookie('datosusuario')
         req.session.destroy(function () {
             res.redirect('/')
         })

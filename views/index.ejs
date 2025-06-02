@@ -39,6 +39,8 @@
 						<p class="usuario"> Publicado por: <a href="/users/profile/<%=productos[i].producto_usuario.id%>"> <%= productos[i].producto_usuario.usuario %>
 						</a>
 						</p>
+						<p> Comentarios: <%= productos[i].producto_comentario.length %> </p>
+
 					</section>
 				</div>
 			<% } %>
